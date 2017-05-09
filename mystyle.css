@@ -1,0 +1,228 @@
+
+body{
+        background: white; /* fallback for old browsers */
+        
+}
+
+.progress-title{
+	color:black;
+}
+
+.unable{
+  color:grey;
+}
+
+div.header{
+        margin-left: 9%;
+        margin-right: 9%;
+        padding: 5px;
+        text-align: center;
+      }
+
+
+div.whiteborder{
+        background-color: white;
+        background-color: rgba(255, 255, 255, 0.7);
+       
+        border-radius: 5px;
+        padding: 20px;
+        /*
+        margin-top: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+        */
+        color: black;
+        text-align: left;
+        overflow: auto;
+      }
+
+element.style {
+    color: #116611;
+}
+type.less:49
+.h2, h2 {
+    font-size: 30px;
+}
+bootstrap.css:1216
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+bootstrap.css:1176
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+bootstrap.css:1062
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+h2 {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.mycaption{
+  position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #FFF;
+    text-align: right;
+    box-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+
+
+/*<changing the navigation style>*/
+/*@media screen and (min-width: 768px)
+bootstrap.css:6457
+.nvbar{
+  color:red;
+  background-color: black;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
+  color:white;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
+  background-color:white;
+}a
+</changing the navigation style>*/
+
+
+
+
+
+
+/*This part is for animation when user scroll down to the main text element*/
+
+.fastanim,.slideanim {visibility:hidden;}
+  .slide1 {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+
+/*footer*/
+.footer-bottom {
+    margin-top:100px;
+    background-color: #333;/*#15224f*/
+    min-height: 30px;
+    width: 100%;
+}
+.copyright {
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+}
+.design {
+    color: #fff;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 7px 0;
+    text-align: right;
+}
+.design a {
+    color: #fff;
+}
+
+/*
+.title{
+  color:blue;
+  text-shadow:2px 3px 10px #000;
+  font-family:"Helvatica"
+}
+*/
+.subtitle{
+  color:#0591C7;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.top{
+  margin-top:50px;
+}
+
+.footer{
+    color: #fff;
+    min-height: 30px;
+    padding: 7px 0;
+}
+
+/* The Modal (background) */
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    text-align:center;
+    background-color: #aaF;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #F00;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
