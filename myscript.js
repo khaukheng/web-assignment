@@ -64,6 +64,7 @@ $(document).ready(function(){
       var loc = location.pathname.substring(location.pathname.lastIndexOf("/")+1);
       switch(loc){
         case "Index.html":
+          checkCookie(1);
           break;
         case "page2.html":
           checkCookie(2);
