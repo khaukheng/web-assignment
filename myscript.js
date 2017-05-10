@@ -135,6 +135,8 @@ $(document).ready(function(){
         for (var j = level + 1; j <=7 ; j++) {
             var ID2 = "pa"+j;
             var ID3 = "pb"+j;
+            alert(ID2);
+            alert(ID3);
             //document.getElementById(ID2).className="unable";
             //document.getElementById(ID3).className="unable";
             document.getElementById(ID2).style.cursor="not-allowed";
