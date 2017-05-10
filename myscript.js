@@ -136,9 +136,9 @@ $(document).ready(function(){
             var ID2 = "pa"+j;
             var ID3 = "pb"+j;
             document.getElementById(ID).classList.addClass("unable");
-            /*document.getElementById(ID2).style.cursor="not-allowed";
+            document.getElementById(ID2).style.cursor="not-allowed";
             document.getElementById(ID3).style.cursor="not-allowed";
-            document.getElementById(ID2).removeAttribute('href');
+            /*document.getElementById(ID2).removeAttribute('href');
             document.getElementById(ID3).removeAttribute('href');*/
         };
     }
