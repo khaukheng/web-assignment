@@ -63,7 +63,7 @@ $(document).ready(function(){
     function locateMe(){
       var loc = location.pathname.substring(location.pathname.lastIndexOf("/")+1);
       switch(loc){
-        case "Index.html":
+        case "index.html":
           checkCookie(1);
           break;
         case "page2.html":
