@@ -132,7 +132,7 @@ $(document).ready(function(){
             if(i>=8){continue;}
             var ID = "p"+i;
             document.getElementById(ID).classList.remove("unable");
-        }
+        };
         for (var j = level + 1; j <=7 ; j++) {
             var ID2 = "pa"+j;
             var ID3 = "pb"+j;
@@ -140,7 +140,7 @@ $(document).ready(function(){
             alert(ID3);
             document.getElementById(ID2).removeAttribute('href');
             document.getElementById(ID3).removeAttribute('href');
-        }
+        };
     }
 
     //document.getElementById("p2").removeAttribute('href');
