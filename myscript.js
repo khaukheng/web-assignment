@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  
+    
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
@@ -124,11 +124,10 @@ $(document).ready(function(){
         }
         
     };
-
     function checkcurrentlevel(){
         var level=parseInt(getCookie("currentlevel"));
         alert(level);
-        for (var i = level + 1; i >= 0; i--) {
+        for (var i = level + 1; i >= 1; i--) {
             if(i>=8){continue;}
             var ID = "p"+i;
             document.getElementById(ID).classList.remove("unable");
@@ -136,13 +135,35 @@ $(document).ready(function(){
         for (var j = level + 1; j <=7 ; j++) {
             var ID2 = "pa"+j;
             var ID3 = "pb"+j;
-            alert(ID2);
-            alert(ID3);
+            document.getElementById(ID).classList.addClass("unable");
+            /*document.getElementById(ID2).style.cursor="not-allowed";
+            document.getElementById(ID3).style.cursor="not-allowed";
             document.getElementById(ID2).removeAttribute('href');
-            document.getElementById(ID3).removeAttribute('href');
+            document.getElementById(ID3).removeAttribute('href');*/
         };
     }
 
+/*
+    var css= 'a:focus,a:hover{text-decoration:none }';
+    var style = document.createElement('style');
+    if(style.styleSheet){
+      style.styleSheet.cssText=css;
+    }else{
+      style.appendChild(document.createTextNode(css));
+    }
+    
+  for (var j =  3; j <=7 ; j++) {
+            var ID2 = "pa"+j;
+            var ID3 = "pb"+j;
+            document.getElementById(ID2).removeAttribute('href');
+            document.getElementById(ID2).style.cursor="default";
+            //document.getElementById(ID2).getElementsByTagName('a').appendChild(style);
+            document.getElementById(ID3).removeAttribute('href');
+            document.getElementById(ID3).style.cursor="default";
+            //document.getElementById(ID3).getElementsByTagName('a').appendChild(style);
+        };
+
+    */
     //document.getElementById("p2").removeAttribute('href');
 /*
 $(window).scroll(function() {
