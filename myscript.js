@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
   
   // Add smooth scrolling to all links in navbar + footer link
@@ -59,39 +58,100 @@ $(document).ready(function(){
 
 
 })
+    //(document.getElementsByClassName("page")).click(locateMe());
+
+    function locateMe(){
+      var loc = location.pathname.substring(location.pathname.lastIndexOf("/")+1);
+      switch(loc){
+        case "Index.html":
+          break;
+        case "page2.html":
+          checkCookie(2);
+          break;
+        case "page3.html":
+          checkCookie(3);
+          break;
+        case "page4.html":
+          checkCookie(4);
+          break;
+        case "page5.html":
+          checkCookie(5);
+          break;
+        case "page6.html":
+          checkCookie(6);
+          break;
+        case "page7.html":
+          checkCookie(7);
+          break;
+        case "default":
+          alert("No Such page exist");
+          break;
+      }
+    }
 
     function setCookie(cname,cvalue,exdays) {
         var d = new Date();
-        d.setTime(d.getTime() + (exdays*24*60*60*1000));
-        var expires = "expires=" + d.toGMTString();
+        d.setTime(d.getTime() + (exdays*60*60*1000));//exdays= number of hours for cookie to be expires
+        var expires = "expires=" + d.toUTCString();
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
 
-    function getCookie(cname) {
-        var name = cname + "=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var ca = decodedCookie.split(';');
-        for(var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            alert(c);
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-        return "";
+    function getCookie(cname) { 
+      var name = cname + "="; 
+      var decodedCookie =decodeURIComponent(document.cookie); 
+      var ca = decodedCookie.split(';');
+      for(var i = 0; i < ca.length; i++) { 
+        var c = ca[i]; 
+        while (c.charAt(0) ==' ') { 
+          c = c.substring(1); 
+        } 
+        if (c.indexOf(name) == 0) { 
+          return c.substring(name.length, c.length); 
+        } 
+      } 
+      return ""; 
     }
 
-    function checkCookie() {
-        var user=getCookie("username");
-        if (user != "") {
-            alert("Welcome again " + user);
-        } else {
-           user = prompt("Please enter your name:","");
-           if (user != "" && user != null) {
-               setCookie("username", user, 30);
-           }
+    function checkCookie(level) {
+        var prior = getCookie("currentlevel");
+        if(prior != ""){
+          if(level>prior){
+            setCookie("currentlevel",level,0.5);
+          }
+        }else{
+          setCookie("currentlevel",level,0.5);
+        }
+        
+    };
+
+    function checkcurrentlevel(){
+        var level=parseInt(getCookie("currentlevel"));
+        alert(level);
+        for (var i = level + 1; i >= 0; i--) {
+            if(i>=8){continue;}
+            var ID = "p"+i;
+            document.getElementById(ID).classList.remove("unable");
+        }
+        for (var j = level + 1; j <=7 ; j++) {
+            var ID2 = "pa"+j;
+            var ID3 = "pb"+j;
+            alert(ID2);
+            alert(ID3);
+            document.getElementById(ID2).removeAttribute('href');
+            document.getElementById(ID3).removeAttribute('href');
         }
     }
+
+    //document.getElementById("p2").removeAttribute('href');
+/*
+$(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide1");
+        }
+    });
+  });
+  */
